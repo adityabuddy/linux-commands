@@ -1,0 +1,46 @@
+----------------------------------FILE COMMANDS-------------------
+mkdir                     ---creates a new directory
+rm(file name)             --removes or deletes a file 
+rm -r (filename)                                 --removes a directory recursively
+rm -rp (filename)                                ---recursively removes files without any confirmation
+cp [source file] [destination file]              --- copies file from one to another directory
+cp -r [source_directory] [destination_directory] --- recursively copies files from one to another directory
+mv [source_file] [destination_file]              --- moves file from one to another directory
+touch [file_name]                                --- creates a new file in the directory
+cat [filename]                                   --shows the data in the files
+cat >> [filename]                                -- used to add data in the files
+head [filename]                                 --shows the  starting 10 lines of the file
+tail [filename]                                 -- shows the last 10 lines of the code
+nano[filename]                                  ---opens or creates a file using nano text editor
+gpg -c [filename]                              -- encrypt a file
+gpg [filename].gpg                              -- decrypt a file
+wc -w [filename]                                --- shows the number of words,lines and bytes in the file
+ls | xargs wc                                   ---- lists the number of lines,words,characters,in a each file in a directory
+diff [firstfile] [secondfile]                    ---compares both the files and thn displays the differences
+
+----------NAVIGATION COMMANDS------------
+ls                   --listing directory
+ls -a               --lists all the files even the hidden ones
+ls -l               --lists files in vertical format
+pwd                 ---shows the directory which im currently in
+cd                  --change directory
+cd ~                -- change directory
+cd ..               --moves to previous directory
+cd -                --changes to the previous directory
+dirs                --shows current directory stack
+
+----------------FILE TRANSFER COMMANDS----------------------
+wget [linkofthewebserver]               ---downloads the file from the web server
+curl -0 [linkoftheserver]               ---transfers data from one server to another with various protocols
+
+
+
+------------USER AND GROUP COMMANDS-----------------
+id                                ---sees details about the active users
+last                              --shows the last system logins
+who                               --displays who is logged in the system
+w                                 ---shows which users are logged in and there activity
+finger [username]                 ---shows user information
+sudo useradd [username]           ---creates a new user account
+sudo adduser [username]           ---creates a new user account using the adduser command interface
+sudo userdel [username]           ---deletes the user account
