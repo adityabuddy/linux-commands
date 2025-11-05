@@ -44,3 +44,117 @@ finger [username]                 ---shows user information
 sudo useradd [username]           ---creates a new user account
 sudo adduser [username]           ---creates a new user account using the adduser command interface
 sudo userdel [username]           ---deletes the user account
+
+
+
+
+---------------------PACKAGE INSTALLATION COMMANDS-----------------------
+sudo apt-get install [package-name]                                 ---Install an APT package using this
+sudo apt install [package-name]                                     ---Install an APT package using newer apt package manager
+sudo dpkg -i [package_name.deb]                                     --- Install a .deb file using this
+apt  list                                                          ---lists all the packages installed with apt
+apt show                                                           --- shows information about the package
+sudo dpkg -l                                                       ---list all the packages installed with dpkg
+
+
+
+
+-------------------UNIVERSAL LINUX PACKAGES------------------------------
+tar zxvf [file_name.tar.gz]
+cd [extracted_directory]                            ------Install software from source code
+./configure make
+make install                                        
+sudo snap install [package_name]                    ------installs a snap package
+sudo snap find [keyword]                            ------searches for the package in snap store
+sudo snap list                                      ----- lists all the snap packages
+flatpak install [package_name]                      -----install a flatpak package
+flatpak list                                        ----- lists all installed flatpak
+flatpak search [package_name]                       ---- search for the flatpak in repo
+
+
+
+
+------------------------PROCESS RELATED COMMANDS-------------------------
+ps                                                ---list active process
+pstree                                            ---show process in treee like diagram
+pmap                                              --- display a memory usage map of processes
+top                                               ---shows all the running processes
+htop                                              ---interactive and colourful process viewer
+kill [process_id]                                 ---terminates a linux process under a given id 
+pkill[process_name]                               ---terminates a process under specific name
+killall[label]                                    ---terminates all label with a given label
+prgrep[keyword]                                   ---list process based on the provided keyword
+pidof[process_name]                               --- show the PID of a process
+bg                                                ---list and resume stopped jobs in the background
+fg                                                ---bring the most recent job suspended job to the foreground
+fg[job]                                           ---bring a particular job to the foreground
+lsof                                              --- list files opened by running the proccess with lsof commands 
+trap "[commands]" [signal]                        ---Catch a system error signal in a shell script. Executes provided commands when the signal is caught.
+nohup [command] &                                 ---Run a Linux process in the background.
+
+
+
+--------------------SYSTEM MANAGEMENT AND INFORMATION COMMANDS------------------------
+uname -r                                         ---shows system information via uname command
+uname -a                                         ---see kernel information
+uptime                                           ---displays system uptime including the load average
+hostname                                         ---view system hostname
+hostname -i                                      ---shows the IP addresses of the system 
+last reboot                                      --- shows system last rebbot history
+date                                             ---shows current data and time
+timedatectl                                      --- change the system clock
+cal                                              ---shows the current calendar 
+whoami                                           --- see which user u are using
+shutdown [hh:mm]                                 ---schedule a system shutdown at a particular time
+shutdowm now                                     ----shutdown the system immediately
+dmesg                                            --- shows the bootup messages
+
+
+
+--------------------------DISK USAGE COMMANDS---------------------------------
+df -h                                         ---check free and used space on mounted system
+df -i                                         ---show free inodes on a mounted file system
+fdisk -l                                      ---displays disk partitions and sizes,types with command
+du -ah                                        ---sees disk usage of all files and directory
+du -sh                                        ---shows disk usage of current directory
+mount                                         ---shows current file mounted system
+findmnt                                       ---display target mount of all the file system
+mount [device_path] [mount_point]             ---mount a device
+
+
+
+-----------------------------SSH LOGIN COMMANDS-----------------------------------
+ssh [user_name]@[remote_host]                               ---connect to a remote host via ssh
+ssh [host]                                                  ---Securely connect to a host via SSH default port 22
+ssh -p [port] [user_name]@[remote_host]                     ---Connect to the host using a particular port
+ssh-keygen                                                  ---Generate SSH key pairs
+sudo service sshd start                                     ---Start SSH server daemon
+scp [file_name] [user_name]@[remote_host]:[remote_path]     ---Securely copy files between local and remote systems via SSH.
+sftp [user_name]@[remote_host]                              ---Interactive file transfer over encrypted SSH session using SFTP protocol
+telnet [host]                                               ---Connect to the host via Telnet default port 23.
+
+
+
+---------------------------------------FILE PERMISSION COMMANDS----------------------------------
+chmod 777 [file_name]                                      ---Assign read, write, and execute file permission to everyone (rwxrwxrwx)
+chmod 755 [file_name]                                      ---Give read, write, and execute permission to owner, and read and execute permission to group and others (rwxr-xr-x)
+chmod 766 [file_name]                                      ---Assign full permission to the owner, and read and write permission to the group and others (rwxrw-rw-)
+chown [user_name] [file_name]                              ---Change the ownership of a file with chown command.
+chown [user_name]:[group_name] [file_name]                 ---	Change the owner and group ownership of a file.
+
+
+
+-----------------------------------NETWORK COMMANDS-----------------------------------------------
+ip addr show                                             ---List IP addresses and network interfaces.
+ip address add [IP_address]                              ---Assign an IP address to interface eth0
+ifconfig                                                 ---Display IP addresses of all network interfaces
+ping [remote_host]                                       ---Ping remote host
+netstat -pnltu                                           ---See active (listening) ports with the netstat command
+netstat -tuln                                            ---Show TCP and UDP ports and their programs.
+whois [domain_name]                                      ---Display more information about a domain.
+dig [domain_name]                                        ---Show DNS information about a domain using the dig command
+dig -x [domain_name]                                     ---Do a reverse DNS lookup on the domain.
+dig -x [IP_address]                                      ---Do a reverse DNS lookup of an IP address.
+host [domain_name]                                       ---Perform an IP lookup for a domain
+hostname -I                                              ---Show the local IP address
+nslookup [domain_name]                                   ---Receive information about an internet domain.
