@@ -158,3 +158,34 @@ dig -x [IP_address]                                      ---Do a reverse DNS loo
 host [domain_name]                                       ---Perform an IP lookup for a domain
 hostname -I                                              ---Show the local IP address
 nslookup [domain_name]                                   ---Receive information about an internet domain.
+
+
+
+
+
+---------------------------------------VARIABLE COMMANDS----------------------------------------------
+let "[variable_name]=[value]"                                 -----Assign an integer value to a variable.
+
+
+
+
+
+
+----------------------------------------SHELL COMMAND MANAGEMENT----------------------------------
+alias [alias-name]='[command]                                 ----Create an alias for a command
+man [command]                                                 ----Display a built-in manual for a command.
+history                                                       ----Print the command history used in the terminal.
+
+
+
+
+-----------------------------------LINUX SHELL KEYBOARD SHORTCUTS--------------------------
+Ctrl + C                          ---kill process running in the terminal
+Ctrl + Z                          ---Stop the current process. The process can be resumed in the foreground with fg or in the background with bg.
+Ctrl + W                          ---Cut one word before the cursor and add it to the clipboard.
+Ctrl + Y                          ---Paste from clipboard
+Ctrl + O                          ---Run the previously recalled command.
+Ctrl + G                          ---Exit command history without running a command.
+clear                             ---clear the screen
+!!                                ---run the last command
+exit                              ---logout of the current session
